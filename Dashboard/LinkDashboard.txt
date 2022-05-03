@@ -1,6 +1,12 @@
 
 Enlace Versión Escritorio
+Muestra la versión de escritorio para administraedor y para clientes.
+
 https://www.figma.com/file/byK2m0ASaYPqfAvDBUpk6p/Untitled-(Copy)?node-id=0%3A1
 
+
+
 Enlace Versión Movil
+Muestra la versión movil para administrador
+
 https://www.figma.com/file/tPhDDPvf9QmdU7L8djn6C1/Untitled?node-id=28%3A2
