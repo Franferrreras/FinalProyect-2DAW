@@ -1,0 +1,108 @@
+.profile {
+
+    &__container {
+        width: 65%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    &__inner.edit {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+
+        .profile__nav__item:nth-child(3) {
+            background-color: color(primary);
+            color: color(white);
+            font-weight: 600;
+
+            i.bx.bx-chevron-right {
+                color: color(white);
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__dates {
+
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        margin-top: 10px;
+
+        &__basic {
+            width: 100%;
+            padding: 10px;
+
+            &__container {
+                border: 1px solid color(greey-3);
+                border-radius: 4px;
+                padding: 10px;
+
+                div {
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        &__relevant {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            >div {
+                padding: 10px;
+                border: 1px solid color(greey-3);
+                border-radius: 4px;
+            }
+
+            .btn.btn__delete {
+                background-color: transparent !important;
+                color: color(primary) !important;
+                padding: 0;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__content {
+        background-color: #ffffff;
+        width: 75%;
+        border-radius: 4px;
+
+        .btn {
+            background-color: color(primary);
+            color: color(white);
+
+        }
+    }
+}
+
+@include media-query(sm) {
+
+    .profile {
+
+        &__inner.edit {
+
+            flex-wrap: wrap;
+
+            .profile__nav__container {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            width: 100%;
+
+            .profile__dates {
+                flex-wrap: wrap;
+            }
+        }
+    }
+    
+}

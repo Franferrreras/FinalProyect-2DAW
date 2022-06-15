@@ -1,0 +1,139 @@
+body {
+    color: #4a4a4a;
+}
+.card {
+
+    &-img {
+        &-container {
+            position: relative;
+        }
+
+        &__status {
+            width: 100%;
+            height: 100%;
+            background-color: #3a393959;
+            z-index: 20;
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+
+            .status {
+                width: 100%;
+
+                h2 {
+                    color: #f73c3c;
+                    font-size: rem(24);
+                    font-weight: 700;
+                    background-color: #ececec56;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .title, .titleWrapper {
+        width: 100%;
+        display: flex;
+
+        &__marca {
+            width: 65%;
+            margin: 0;
+            font-weight: 700;
+            color: #003e70;
+        }
+
+        &__price {
+            width: 35%;
+            margin: 0;
+            text-align: right;
+            font-weight: 700;
+            font-size: rem(24);
+            color: color(blue-1);
+
+            &::after {
+                content: "€";
+                margin-left: 2px;
+            }
+        }
+    }
+
+    .subtitleWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .subtitle {
+
+            &__version {
+                font-size:rem(16);
+                font-weight: 400;
+                line-height: 1.5;
+                color: #4a4a4a;
+            }
+
+            &__monthlyPrice {
+                font-size:rem(16);
+                font-weight: 400;
+                text-align: right;
+            }
+        }
+    }
+
+    .features {
+        display: flex;
+        justify-content:space-between;
+        width: 100%;
+
+        .feature-list {
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+
+            :first-child {
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            :last-child {
+                flex-basis: 100%;
+                margin-left: 0;
+            }
+
+            &__item {
+
+                position: relative;
+                display: inline-block;
+                padding: 5px 14px 0 0;
+                margin: 0;
+                font-size: rem(14);
+            }
+        }
+
+        .totalPrice {
+            padding-top: 2px;
+            white-space: nowrap;
+            text-align: right;
+
+            span {
+                font-weight: 600;
+
+                &::after {
+                    content: "€";
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+}
