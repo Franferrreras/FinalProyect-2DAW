@@ -9,6 +9,7 @@
 		<main>
 			<div class="main__detail">
                 <div class="card">
+                <!-- 
                 	<form action="#" th:action="@{/car/details/addIMG}" method="post" enctype="multipart/form-data">
                         <div class="add-container">
                             <label for="imagen" id="newInput"><i class='bx bx-image-add' style='color:#5c5858'></i></label>
@@ -17,6 +18,7 @@
                             <input type="submit" value="add +" id="btn-addImg" class="btn-addImg">
                         </div>
                 	</form>
+                -->
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     	<div class="carousel-inner">
                     	    <div class="carousel-item" th:each="i : ${vehiculo.getListImagenes()}" th:unless="${vehiculo.imagenes.size() == 0}">
@@ -35,27 +37,6 @@
 						    <span class="sr-only">Next</span>
  						</a>
                     </div>
-                    <!-- <div class="card-body">
-                        <div class="titleWrapper">
-                            <h2 class="title__marca" th:text="${vehiculo.marca}"></h2>
-                            <div class="title__price" th:text="${vehiculo.price}"></div>
-                        </div>
-                        <div class="subtitleWrapper">
-                            <h3 class="subtitle__version" th:text="${vehiculo.version}"></h3> 
-                            <div class="subtitle__monthlyPrice">Cuota</div>
-                        </div>
-                        <div class="features">
-                            <div class="feature-list__wrapper">
-                                <ul class="feature-list">
-                                    <li class="feature-list__item" th:text="${vehiculo.year}"></li>
-                                    <li class="feature-list__item" th:text="${vehiculo.combustible}"></li>
-                                    <li class="feature-list__item" th:text="${vehiculo.kilometros}"></li>
-                                    <li class="feature-list__item">Caja Cambio</li>
-                                </ul>
-                            </div>
-                            <div class="totalPrice">Al contado</div>
-                        </div>
-                    </div> -->
                 </div>
                 <section class="vehicle__genericInfo bg-white">
                     <div class="vehicle__genericInfo__inner">
