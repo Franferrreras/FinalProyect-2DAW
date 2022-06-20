@@ -245,5 +245,13 @@ public class AdminController {
 		
 		return "redirect:/admin/ficha?customer="+Long.parseLong(customer);
 	}
+	
+	@GetMapping("removeCar")
+	public String deleteCar(@RequestParam(name="matricula", required=false) String matricula) {
+		
+		
+		
+		return null;
+	}
 
 }

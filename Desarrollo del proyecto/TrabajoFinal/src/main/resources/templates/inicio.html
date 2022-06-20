@@ -201,6 +201,9 @@
                 </div>
                 <div th:if="${vehiculos.size() > 0}" th:each="v : ${vehiculos}" class="card">
                     <div class="card-img-container">
+                        <div class="deleteCar" sec:authorize="hasRole('ROLE_ADMIN')">
+                            <a th:href="@{/admin/removeCar}"><i class='bx bxs-trash'></i></a>
+                        </div>
                         <a th:href="@{'/car/details?matricula='+${v.getMatricula()}}">
                             <img class="card-img-top" th:unless="${v.imagenes.size() == 0}" th:src="@{'img/' + ${v.getArrayImagenes(0)}}">
                             <img class="card-img-top" th:if="${v.imagenes.size() == 0}" src="img/generic_v3.png">

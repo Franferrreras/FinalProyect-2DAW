@@ -911,6 +911,17 @@ body {
           font-weight: 700; }
           .evr-main .main__content.dashboard .card.perfil__comercial input[type="submit"]:hover {
             background-color: rgba(194, 173, 149, 0.747) !important; }
+    .evr-main .main__content.dashboard form {
+      position: relative; }
+      .evr-main .main__content.dashboard form .addEmployee {
+        background-color: #ff783e;
+        width: 120px;
+        border-radius: 4px;
+        border: 1px solid white;
+        padding: 5px;
+        text-align: center; }
+        .evr-main .main__content.dashboard form .addEmployee a {
+          color: white; }
     .evr-main .main__content-cars {
       position: relative; }
       .evr-main .main__content-cars .btn__addCar {
@@ -1062,96 +1073,107 @@ main {
 body {
   color: #4a4a4a; }
 
-.card-img-container {
+.card {
   position: relative; }
-.card-img__status {
-  width: 100%;
-  height: 100%;
-  background-color: #3a393959;
-  z-index: 20;
-  position: absolute;
-  top: 0;
-  display: flex;
-  align-items: flex-end;
-  text-align: center; }
-  .card-img__status .status {
-    width: 100%; }
-    .card-img__status .status h2 {
-      color: #f73c3c;
-      font-size: 1.5rem;
-      font-weight: 700;
-      background-color: #ececec56;
-      width: 100%;
-      margin-bottom: 20px; }
-.card .title, .card .titleWrapper {
-  width: 100%;
-  display: flex; }
-  .card .title__marca, .card .titleWrapper__marca {
-    width: 65%;
-    margin: 0;
-    font-weight: 700;
-    color: #003e70; }
-  .card .title__price, .card .titleWrapper__price {
-    width: 35%;
-    margin: 0;
-    text-align: right;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #003e70; }
-    .card .title__price::after, .card .titleWrapper__price::after {
-      content: "€";
-      margin-left: 2px; }
-.card .subtitleWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between; }
-  .card .subtitleWrapper .subtitle__version {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #4a4a4a; }
-  .card .subtitleWrapper .subtitle__monthlyPrice {
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: right; }
-.card .features {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; }
-  .card .features .feature-list {
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+  .card-img-container {
+    position: relative; }
+  .card-img__status {
+    width: 100%;
+    height: 100%;
+    background-color: #3a393959;
+    z-index: 20;
+    position: absolute;
+    top: 0;
     display: flex;
-    overflow: hidden;
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0; }
-    .card .features .feature-list :first-child {
-      padding-left: 0;
-      margin-left: 0; }
-    .card .features .feature-list :last-child {
-      flex-basis: 100%;
-      margin-left: 0; }
-    .card .features .feature-list__item {
-      position: relative;
-      display: inline-block;
-      padding: 5px 14px 0 0;
+    align-items: flex-end;
+    text-align: center; }
+    .card-img__status .status {
+      width: 100%; }
+      .card-img__status .status h2 {
+        color: #f73c3c;
+        font-size: 1.5rem;
+        font-weight: 700;
+        background-color: #ececec56;
+        width: 100%;
+        margin-bottom: 20px; }
+  .card .deleteCar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -10px; }
+    .card .deleteCar a {
+      color: inherit; }
+      .card .deleteCar a i {
+        color: #ff783e; }
+  .card .title, .card .titleWrapper {
+    width: 100%;
+    display: flex; }
+    .card .title__marca, .card .titleWrapper__marca {
+      width: 65%;
       margin: 0;
-      font-size: 0.875rem; }
-  .card .features .totalPrice {
-    padding-top: 2px;
-    white-space: nowrap;
-    text-align: right; }
-    .card .features .totalPrice span {
-      font-weight: 600; }
-      .card .features .totalPrice span::after {
+      font-weight: 700;
+      color: #003e70; }
+    .card .title__price, .card .titleWrapper__price {
+      width: 35%;
+      margin: 0;
+      text-align: right;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #003e70; }
+      .card .title__price::after, .card .titleWrapper__price::after {
         content: "€";
         margin-left: 2px; }
+  .card .subtitleWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .card .subtitleWrapper .subtitle__version {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #4a4a4a; }
+    .card .subtitleWrapper .subtitle__monthlyPrice {
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: right; }
+  .card .features {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    .card .features .feature-list {
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+      display: flex;
+      overflow: hidden;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0; }
+      .card .features .feature-list :first-child {
+        padding-left: 0;
+        margin-left: 0; }
+      .card .features .feature-list :last-child {
+        flex-basis: 100%;
+        margin-left: 0; }
+      .card .features .feature-list__item {
+        position: relative;
+        display: inline-block;
+        padding: 5px 14px 0 0;
+        margin: 0;
+        font-size: 0.875rem; }
+    .card .features .totalPrice {
+      padding-top: 2px;
+      white-space: nowrap;
+      text-align: right; }
+      .card .features .totalPrice span {
+        font-weight: 600; }
+        .card .features .totalPrice span::after {
+          content: "€";
+          margin-left: 2px; }
 
 .card.card-carrito html {
   font-size: 1.2vw; }

@@ -12,7 +12,7 @@ public class VehicleServiceImpl implements VehicleService {
 
 	@Autowired
 	VehicleRepository vehicleRepo;
-	
+
 	@Override
 	public List<Vehicle> getAllVehicles() {
 		// TODO Auto-generated method stub
@@ -22,11 +22,11 @@ public class VehicleServiceImpl implements VehicleService {
 	@Override
 	public Vehicle insertVehicle(Vehicle vehicle) {
 		// TODO Auto-generated method stub
-		
+
 		if (vehicle != null) {
 			return vehicleRepo.save(vehicle);
 		}
-		
+
 		return null;
 	}
 
@@ -37,9 +37,12 @@ public class VehicleServiceImpl implements VehicleService {
 	}
 
 	@Override
-	public Vehicle deleteVehicle(Vehicle vehicle) {
+	public boolean deleteVehicle(Vehicle vehicle) {
 		// TODO Auto-generated method stub
-		return null;
+
+		vehicleRepo.delete(vehicle);
+
+		return true;
 	}
 
 	@Override
@@ -60,6 +63,5 @@ public class VehicleServiceImpl implements VehicleService {
 		// TODO Auto-generated method stub
 		return vehicleRepo.findVehicleById(id);
 	}
-
 
 }
